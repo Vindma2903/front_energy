@@ -101,12 +101,12 @@
 
 /* Текст для отправленных сообщений */
 .nav-msg-user-sent .nav-msg-user-message-text {
-  color: #ffffff; /* Белый текст */
+  color: #2E2E2E; /* Белый текст */
 }
 
 /* Текст для полученных сообщений */
 .nav-msg-user-received .nav-msg-user-message-text {
-  color: #333333; /* Тёмный текст */
+  color: #FFFFFF; /* Тёмный текст */
 }
 
 .nav-message-user-home-container {
@@ -158,8 +158,8 @@
   display: flex;
   flex-direction: column; /* Располагаем текст и время по вертикали */
   align-items: flex-start; /* Выравниваем текст сообщения по левому краю */
-  max-width: 60%; /* Сообщение не превышает 60% ширины контейнера */
-  background-color: #f5f5f5; /* Фон сообщения */
+  max-width: 100%; /* Сообщение не превышает 60% ширины контейнера */
+  background-color: #615EF0; /* Фон сообщения */
   padding: 0.5rem 1rem; /* Внутренние отступы */
   border-radius: 8px; /* Скруглённые углы */
   word-wrap: break-word; /* Перенос длинных слов */
@@ -169,7 +169,7 @@
 
 .nav-msg-user-chat-message.nav-msg-user-sent {
   align-self: flex-start; /* Выравниваем по левому краю */
-  background-color: #615EF0;
+  background-color: #FFFFFF;
   color: white;
 }
 
@@ -215,7 +215,7 @@ display: flex;
   position: fixed; /* Фиксированное положение */
   bottom: 0; /* Прижат к низу */
   left: calc(22.5rem + 200px); /* Учитываем ширину бокового меню и навигации */
-  width: calc(100% - 22.5rem - 80px); /* Учитываем оставшуюся ширину */
+  width:80%; /* Учитываем оставшуюся ширину */
   max-height: calc(100vh - 120px); /* Ограничиваем высоту */
   overflow-y: auto; /* Прокрутка для сообщений */
   border-radius: 8px;
@@ -243,7 +243,7 @@ display: flex;
   flex-direction: column;
   border-radius: 8px;
   padding: 0.5rem 1rem;
-  max-width: 70%; /* Ограничение ширины сообщений */
+  max-width: 100%; /* Ограничение ширины сообщений */
   color: #333; /* Цвет текста */
   font-size: 1rem; /* Размер текста */
   line-height: 1.5;
@@ -279,9 +279,8 @@ display: flex;
 .nav-msg-user-message-time {
     font-size: 0.75rem; /* Размер текста для времени */
   color: #ccc; /* Цвет текста времени */
-  position: absolute; /* Позволяет точно позиционировать */
-  bottom: 0.5rem; /* Расстояние от нижней границы блока */
-  right: 1rem; /* Расстояние от правой границы блока */
+  bottom: 0px; /* Расстояние от нижней границы блока */
+  right: 0rem; /* Расстояние от правой границы блока */
   text-align: right; /* Выравнивание по правому краю */
 }
 
@@ -289,4 +288,16 @@ display: flex;
  display: flex;
   align-items: flex-start;
   gap: 1rem; /* Расстояние между аватаром и сообщением */
+}
+
+.nav-msg-user-message-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-msg-user-sender-name {
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: #2E2E2E;
 }
