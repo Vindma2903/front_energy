@@ -1,6 +1,7 @@
 // board-crm.tsx
 import React, { useState, useEffect } from "react";
 import { DragDropContext, DropResult, DragUpdate } from "react-beautiful-dnd";
+import { Droppable, Draggable } from "react-beautiful-dnd";
 import Column from "@/shared/ui/crm/add-deal";
 import { DeleteArea } from "@/shared/ui/crm/delete-task";
 import TaskDetailsModal from "@/shared/ui/common/TaskDetailsModal";
@@ -112,6 +113,11 @@ export const BoardCRM: React.FC = () => {
 
     const [movedDeal] = sourceDeals.splice(source.index, 1);
     movedDeal.columnId = destination.droppableId; // ✅ Обновляем columnId
+
+    // 👇 Сохраняем новое положение на сервере
+updateDealColumn(movedDeal.id, destination.droppableId).catch((err) => {
+  console.error("Ошибка при обновлении колонки сделки на сервере", err);
+});
 
     destDeals.splice(destination.index, 0, movedDeal);
 

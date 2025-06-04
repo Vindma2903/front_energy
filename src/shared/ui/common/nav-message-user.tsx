@@ -92,9 +92,10 @@ export const NavMessageUser: React.FC<NavMessageUserProps> = ({ onSelectChat }) 
                 }`}
                 onClick={() => handleSelectChat(chat.id, chat.userName)}
               >
-                <div className="nav-msg-user-user-icon">
-                  {chat.userName.charAt(0).toUpperCase()}
+                                <div className="nav-msg-user-user-icon">
+                  {chat.userName?.trim()?.charAt(0)?.toUpperCase() || "?"}
                 </div>
+
                 <div className="nav-msg-user-message-content">
                   <p className="nav-msg-user-user-name">{chat.userName}</p>
                   <p className="nav-msg-user-message-text">{chat.messageText}</p>

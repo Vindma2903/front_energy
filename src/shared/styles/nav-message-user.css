@@ -160,7 +160,6 @@
   align-items: flex-start; /* Выравниваем текст сообщения по левому краю */
   max-width: 100%; /* Сообщение не превышает 60% ширины контейнера */
   background-color: #615EF0; /* Фон сообщения */
-  padding: 0.5rem 1rem; /* Внутренние отступы */
   border-radius: 8px; /* Скруглённые углы */
   word-wrap: break-word; /* Перенос длинных слов */
   word-break: break-word; /* Дополнительный перенос слов */
@@ -169,7 +168,7 @@
 
 .nav-msg-user-chat-message.nav-msg-user-sent {
   align-self: flex-start; /* Выравниваем по левому краю */
-  background-color: #FFFFFF;
+  background-color: #F4F5F7;
   color: white;
 }
 
@@ -300,4 +299,15 @@ display: flex;
   margin: 0 0 4px 0;
   font-size: 1rem;
   color: #2E2E2E;
+}
+
+.nav-msg-user-user-name,
+.nav-msg-user-message-text {
+  white-space: nowrap;        /* запрет переноса */
+  overflow: hidden;           /* скрыть выходящий за пределы текст */
+  text-overflow: ellipsis;    /* троеточие в конце */
+}
+
+.nav-msg-user-incoming-messages {
+  overflow-x: hidden; /* прячем горизонтальный скролл */
 }

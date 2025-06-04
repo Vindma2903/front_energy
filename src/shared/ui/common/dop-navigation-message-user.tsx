@@ -15,18 +15,8 @@ export const NavCRM: React.FC = () => {
         <img src="/close.svg" alt="Закрыть" className="dop-navigation-close-icon" />
       </button>
 
-      {/* Кнопка уведомлений */}
-      <button className="dop-navigation-message-button">
-        <img src="/bell.svg" alt="Уведомления" className="dop-navigation-message-icon" />
-      </button>
 
-      {/* Кнопка перехода на страницу dialog-user */}
-      <button
-        className="dop-navigation-message-button"
-        onClick={() => navigate("/dialog-user")}
-      >
-        <img src="/message.svg" alt="Сообщения" className="dop-navigation-message-icon" />
-      </button>
+
 
       <style>
         {`

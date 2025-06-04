@@ -253,7 +253,6 @@
 /* Стили для зоны перетаскивания */
 .crm-task-list {
   background-color: #FAFAFA; /* Светлый фон */
-  width: 380px; /* Фиксированная ширина */
   padding: 12px; /* Внутренние отступы */
   display: flex;
   flex-direction: column;
@@ -509,4 +508,54 @@
 
 .delete-modal-confirm:hover {
   background: #4946D1;
+}
+
+.column-wrapper {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  width: 368px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.column-header-inside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.column-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.deal-count {
+  background-color: #ddd;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.add-deal-button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  line-height: 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-deal-button:hover {
+  background-color: #0056b3;
 }
